@@ -14,13 +14,27 @@
     if (isset($_POST["wyloguj"])) {
         $_SESSION["zalogowany"] = false;
     }
+    if (isset($_COOKIE["COOKIE"])) {
+        echo "Ciasteczko jest ustawione!<br>";
+        echo "Wartosc: " . $_COOKIE["COOKIE"] . "<br><br>";
+    }
     ?>
     <form action="logowanie.php" method="post">
-        Login: <input type="text" name="login"><br>
-        Haslo: <input type="password" name="passwd"><br>
-        <input type="submit" value="Zaloguj" name="logged">
+        <fieldset>
+            <legend>Zaloguj sie:</legend>
+            Login: <input type="text" name="login"><br><br>
+            Haslo: <input type="password" name="passwd"><br><br>
+            <input type="submit" value="Zaloguj mnie" name="logged">
+        </fieldset>
     </form>
-    <a href="user.php"> user.php </a>
+    <!-- <a href="user.php"> user.php </a> -->
+    <form action="cookie.php" method="GET">
+        <fieldset>
+            <legend>Wygeneruj cookie:</legend>
+            <input type="number" name="czas"><br><br>
+            <input type="submit" value="Utworz" name="utworzCookie"><br>
+        </fieldset>
+    </form>
 </body>
 
 </html>
