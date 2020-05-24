@@ -27,7 +27,7 @@
             </td>
             <td>
                 @Html.(IEnumerable<ASP.NET_MVC.Models.Genre>)ViewBag.Genres.Select(x => new SelectListItem() { Text = x.Name, Value = x.Id.ToString() })
-</td>
+            </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id })
                 @Ajax.ActionLink("Delete", "Delete", new { id = item.Id }, new AjaxOptions()
@@ -41,4 +41,4 @@
     }
 
 </table>
-@Scripts.Render("~/bundles/jqueryval")
+

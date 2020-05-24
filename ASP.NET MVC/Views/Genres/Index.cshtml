@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<ASP.NET_MVC.Models.Genre>
 
-@{
-    Layout = null;
-}
+
 
 <!DOCTYPE html>
 
@@ -15,6 +13,6 @@
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-   
+    @Html.Partial("_GenresList", Model)
 </body>
 </html>
