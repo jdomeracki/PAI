@@ -1,2 +1,2 @@
 # PAI
-Podstawy Aplikacji Internetowych 
+Web Applications Course (Podstawy Aplikacji Internetowych)
